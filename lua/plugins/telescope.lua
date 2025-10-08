@@ -33,11 +33,11 @@ return {
                 },
             })
 
-            telescope.load_extension("fzf")
+           telescope.load_extension("fzf")
 
             local keymap = vim.keymap
 
-            keymap.set('n', '<C-p>', "<cmd>Telescope find_files hidden=true no_ignore=true<cr>", {})
+            keymap.set('n', '<C-p>', "<cmd>Telescope find_files hidden=true no_ignore=false<cr>", {})
             keymap.set('n', '<leader>fg', builtin.live_grep, {})
             keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", {})
         end
